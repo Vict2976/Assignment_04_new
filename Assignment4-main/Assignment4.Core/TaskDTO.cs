@@ -1,13 +1,35 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.ComponentModel.DataAnnotations;
+
+
 
 namespace Assignment4.Core
 {
-    public record TaskDTO(int Id, string Title, string AssignedToName, IReadOnlyCollection<string> Tags, State State);
+    public record TaskDTO
+    {
+        public int Id {get; init;}
+        public string Title {get; init;}
+        public string AssignedToName {get; set;}
+        public ICollection<string> Tags {get; set;}
+        public State State {get; set;}
+    } 
 
-    public record TaskDetailsDTO(int Id, string Title, string Description, DateTime Created, string AssignedToName, IReadOnlyCollection<string> Tags, State State, DateTime StateUpdated) : TaskDTO(Id, Title, AssignedToName, Tags, State);
+    public record TaskDetailsDTO
+    {
+        public int Id {get; init;}
+        public string Title {get; init;}
+        public string Description {get; init;}
+        public DateTime Created { get; set; }
+        public string AssignedToName { get; set; }
+        public ICollection<string> Tags { get; set; }
+        public State state { get; set; }
 
+        public DateTime StateUpdated { get; set; }
+
+        
+    }
     public record TaskCreateDTO
     {
         [Required]

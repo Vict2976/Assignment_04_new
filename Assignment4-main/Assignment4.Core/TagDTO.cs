@@ -2,7 +2,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Assignment4.Core
 {
-    public record TagDTO(int Id, string Name);
+    public record TagDTO
+    {
+            public int id { get; set; }
+            public string Name { get; set; }
+        
+    }
 
     public record TagCreateDTO
     {

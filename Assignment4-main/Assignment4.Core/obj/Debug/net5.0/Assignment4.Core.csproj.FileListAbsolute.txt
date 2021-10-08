@@ -1,0 +1,15 @@
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\bin\Debug\net5.0\Assignment4.Core.deps.json
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\bin\Debug\net5.0\Assignment4.Core.dll
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\bin\Debug\net5.0\ref\Assignment4.Core.dll
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\bin\Debug\net5.0\Assignment4.Core.pdb
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.csproj.AssemblyReference.cache
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.AssemblyInfoInputs.cache
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.AssemblyInfo.cs
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.dll
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\ref\Assignment4.Core.dll
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.pdb
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\bin\Debug\net5.0\Assignment4.Core.runtimeconfig.json
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\bin\Debug\net5.0\Assignment4.Core.runtimeconfig.dev.json
+C:\Users\Bruger\Third semester\BDSA\Assignment_04_new\Assignment4-main\Assignment4.Core\obj\Debug\net5.0\Assignment4.Core.genruntimeconfig.cache
