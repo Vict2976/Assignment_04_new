@@ -22,14 +22,14 @@ namespace Assignment4.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             modelBuilder
-                .Entity<TaskDTO>()
+                .Entity<Task>()
                 .Property(e => e.State)
                 .HasConversion(
                     v => v.ToString(),
                     v => (State)Enum.Parse(typeof(State), v));
                 
             modelBuilder
-                .Entity<TagCreateDTO>()
+                .Entity<Tag>()
                 .HasIndex(c => c.Name)
                 .IsUnique();
             

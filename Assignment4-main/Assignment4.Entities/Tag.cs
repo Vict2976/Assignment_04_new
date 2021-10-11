@@ -12,7 +12,7 @@ namespace Assignment4.Entities
 
         [MaxLength(50)]
         [Required]
-        public string Name { get; init; }
+        public string Name { get; set; }
         public List<Task> Tasks { get; init; }
     }
 }
