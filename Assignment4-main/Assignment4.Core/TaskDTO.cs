@@ -11,8 +11,8 @@ namespace Assignment4.Core
     {
         public int Id {get; init;}
         public string Title {get; init;}
-        public string AssignedToName {get; set;}
-        public ICollection<string> Tags {get; set;}
+        public int? AssignedToId {get; set;}
+        public ICollection<int> Tags {get; set;}
         public State State {get; set;}
     } 
 
@@ -23,7 +23,7 @@ namespace Assignment4.Core
         public string Description {get; init;}
         public DateTime Created { get; set; }
         public string AssignedToName { get; set; }
-        public ICollection<string> Tags { get; set; }
+        public ICollection<int> Tags { get; set; }
         public State state { get; set; }
 
         public DateTime StateUpdated { get; set; }
@@ -36,11 +36,11 @@ namespace Assignment4.Core
         [StringLength(100)]
         public string Title { get; init; }
 
-        public int? AssignedToId { get; init; }
+        public int AssignedToId { get; init; }
 
         public string Description { get; init; }
 
-        public ICollection<string> Tags { get; init; }
+        public List<int> Tags { get; init; }
     }
 
     public record TaskUpdateDTO : TaskCreateDTO
@@ -48,5 +48,7 @@ namespace Assignment4.Core
         public int Id { get; init; }
 
         public State State { get; init; }
+        
+        public List<int> Tags { get; init; }
     }
 }

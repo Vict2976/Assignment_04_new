@@ -12,11 +12,14 @@ namespace Assignment4.Entities
         [MaxLength(100)]
         [Required]
         public string Title { get; init; }
-        public User AssignedToId { get; init; }
+        public int? AssignedToId { get; init; }
         public string Description { get; init; }
-        public State State { get; init; }
-        public List<Tag> Tags { get; init; }
-      
+        public State State { get; set; }
+        public List<Tag> Tags { get; set; }
+
+        public DateTime CreatedUTC { get; set; }
+
+        public DateTime StateUpdatedUTC { get; set; }
 
     }
 }

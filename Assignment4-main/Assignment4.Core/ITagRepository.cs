@@ -6,8 +6,8 @@ namespace Assignment4.Core
     {
         (Response Response, int TagId) Create(TagCreateDTO tag);
         IReadOnlyCollection<TagDTO> ReadAll();
-        TagDTO Read(int tagId);
+        TagDetailsDTO Read(int tagId);
         Response Update(TagUpdateDTO tag);
-        Response Delete(int tagId, bool force = false);
+        (Response response, int tagId , string tagName) Delete(int tagId, bool force = false);
     }
 }

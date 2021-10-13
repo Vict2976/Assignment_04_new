@@ -2,10 +2,11 @@ using Assignment4.Core;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using Assignment4;
 
 namespace Assignment4.Entities
 {
-    public class TagRepository
+    public class TagRepository : ITagRepository
     {
         
         private readonly KanbanContext _context;
@@ -16,7 +17,8 @@ namespace Assignment4.Entities
         }
 
         public (Response Response, int TagId) Create(TagCreateDTO tag){
-            var entity = new Tag{Name = tag.Name};
+            var tasks = new List<Task>();
+            var entity = new Tag{Name = tag.Name, Tasks = tasks};
             try{
                 var addedTag = _context.Tags.Add(entity);
                 _context.SaveChanges();
@@ -28,12 +30,19 @@ namespace Assignment4.Entities
 
         public IReadOnlyCollection<TagDTO> ReadAll() =>
             _context.Tags
-                .Select(c => new TagDTO(c.Id, c.Name))
+                .Select(c => new TagDTO{Id = c.Id, Name = c.Name})
                 .ToList()  
                 .AsReadOnly();
         
     
-        public Tag Read(int tagId) => _context.Tags.Find(tagId);
+        public TagDetailsDTO Read(int tagId) {
+            Tag tag = _context.Tags.Find(tagId);
+            var taskDTOs = new List<TaskDTO>();
+            foreach(var t in tag.Tasks){
+                taskDTOs.Add(new TaskDTO{Id = t.Id, Title = t.Title, AssignedToId = t.AssignedToId, Tags = t.Tags.Select(x => x.Id).ToList(), State = t.State});
+            }
+            return new TagDetailsDTO{id = tag.Id, name = tag.Name, Tasks = taskDTOs};
+        }
         
         public Response Update(TagUpdateDTO tag){
             Tag entity = _context.Tags.Find(tag.Id);
@@ -50,7 +59,7 @@ namespace Assignment4.Entities
             if (tag == null)
                 return (Response.NotFound, tagId, null);
 
-            if (tag.Tasks == null || force || tag.Tasks.Any() == true) //This logic-order is important, as .Any() cannot be called on null
+            if (force || tag.Tasks.Any() == false) 
             {
                 _context.Tags.Remove(tag);
                 _context.SaveChanges();
@@ -59,5 +68,6 @@ namespace Assignment4.Entities
             else 
                 return (Response.Conflict, tagId, tag.Name);
         }
+
     }
 }

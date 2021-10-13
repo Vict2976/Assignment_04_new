@@ -19,17 +19,3 @@ namespace Assignment4.Entities
         public List<Task> Tasks { get; set; }
     }
 }
-
-
-//City, CityRepo, iCityRepo
-
-
-/*public cityDTO read (int cityID)
-    var citeis= from c in _context.cities
-                where c.id==cityid
-                select new cityDTO(c.id, c.name)
-    
-    return cities.firstOrDefault();
-            
-
-    */

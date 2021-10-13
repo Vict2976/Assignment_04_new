@@ -858,11 +858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Bruger\\Third semester\\BDSA\\Assignment_04_new\\Assignment4-main\\Assignment4.Core\\Assignment4.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Third semester\\BDSA\\Assignment_04_new\\Assignment4-main\\Assignment4.Core\\Assignment4.Core.csproj",
       "projectName": "Assignment4.Core",
-      "projectPath": "c:\\Users\\Bruger\\Third semester\\BDSA\\Assignment_04_new\\Assignment4-main\\Assignment4.Core\\Assignment4.Core.csproj",
+      "projectPath": "C:\\Users\\Bruger\\Third semester\\BDSA\\Assignment_04_new\\Assignment4-main\\Assignment4.Core\\Assignment4.Core.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Bruger\\Third semester\\BDSA\\Assignment_04_new\\Assignment4-main\\Assignment4.Core\\obj\\",
+      "outputPath": "C:\\Users\\Bruger\\Third semester\\BDSA\\Assignment_04_new\\Assignment4-main\\Assignment4.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",

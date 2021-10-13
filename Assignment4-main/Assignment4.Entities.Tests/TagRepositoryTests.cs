@@ -67,9 +67,10 @@ namespace Assignment4.Entities.Tests
             var update = new TagUpdateDTO{Id = tag.TagId, Name = "Not Fun"};
 
             var response = _repo.Update(update);
-
+            
             Assert.Equal(Response.Updated, response);
-            Assert.Equal(update.Name, _repo.Read(update.Id).Name);
+            Assert.Equal(update.Id, tag.TagId);
+            Assert.Equal(update.Name, _repo.Read(update.Id).name);
         }
         
         [Fact]
@@ -85,9 +86,9 @@ namespace Assignment4.Entities.Tests
 
 
             var eTag = new List<TagDTO>(){
-                new TagDTO(1, "BackEnd"),
-                new TagDTO(2, "FrontEnd"),
-                new TagDTO(3, "FullStack")
+                new TagDTO{Id = 1, Name = "BackEnd"},
+                new TagDTO{Id = 2, Name = "FrontEnd"},
+                new TagDTO{Id = 3, Name = "FullStack"}
             };
 
             Assert.Equal(eTag,  _repo.ReadAll());
@@ -126,6 +127,23 @@ namespace Assignment4.Entities.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        /*[Fact] //Tasks skal først implementeres før der kan testes for conflict
+        public void delete_tag_get_response_conflict(){
+
+            // Arrange
+            var tag = new TagCreateDTO{Name ="Backend"};
+            var createdTag = _repo.Create(tag);
+            string str = null;
+            var expected = (Response.Conflict, 1, "Backend");
+            // Kode som laver _repo.Create(Task) med "Backend" som tag
+
+            // Act
+            var actual = _repo.Delete(1);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }*/
 
         public void Dispose(){
             _context.Dispose();

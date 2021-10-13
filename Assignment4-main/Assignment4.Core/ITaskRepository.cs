@@ -12,6 +12,6 @@ namespace Assignment4.Core
         IReadOnlyCollection<TaskDTO> ReadAllByState(State state);
         TaskDetailsDTO Read(int taskId);
         Response Update(TaskUpdateDTO task);
-        Response Delete(int taskId);
+        (Response response, int taskId , string taskTitle) Delete(int taskId);
     }
 }
